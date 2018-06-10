@@ -130,6 +130,9 @@ func fetch() (model.Result, error) {
 	if err != nil {
 		return result, err
 	}
+	if rep.Body != nil {
+		defer rep.Body.Close()
+	}
 	data, err := ioutil.ReadAll(rep.Body)
 	if err != nil {
 		return result, err
