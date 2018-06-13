@@ -90,6 +90,7 @@ func process(result *model.Result, now time.Time) {
 		fields := make(map[string]interface{})
 		fields[fmt.Sprintf("amount%d", i+1)] = d.TradeCount * d.Price
 		fields[fmt.Sprintf("volume%d", i+1)] = d.TradeCount
+		fields[fmt.Sprintf("price%d", i+1)] = d.Price
 		pt, err := influx.NewPoint("trade", map[string]string{}, fields, now)
 		if err == nil {
 			bp.AddPoint(pt)
