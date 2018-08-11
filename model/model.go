@@ -60,7 +60,7 @@ type BuyTrade struct {
 	TradeType         int     `json:"tradeType"`
 	BlockType         int     `json:"blockType"`
 	PayMethod         string  `json:"payMethod"`
-	PayTerm           string  `json:"payTerm"`
+	PayTerm           int     `json:"payTerm"`
 	PayName           string  `json:"payName"`
 	MinTradeLimit     float64 `json:"minTradeLimit"`
 	MaxTradeLimit     float64 `json:"maxTradeLimit"`
