@@ -113,7 +113,7 @@ func process(result *model.Result, now time.Time) {
 //curl 'https://api-otc.hb-otc.net/v1/otc/trade/list/public?coinId=1&tradeType=1&currentPage=1&payWay=&country=&merchant=1&online=1&range=0&pageSize=100' -H 'Origin: https://otc.huobipro.com' -H 'Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7' -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36' -H 'otc-language: zh-CN' -H 'Accept: application/json, text/plain, */*' -H 'Referer: https://otc.huobipro.com/' -H 'X-Requested-With: XMLHttpRequest' -H 'Connection: keep-alive'
 func fetch() (model.Result, error) {
 	var result model.Result
-	req, _ := http.NewRequest(http.MethodGet, "https://api-otc.hb-otc.net/v1/otc/trade/list/public?coinId=1&tradeType=1&currentPage=1&payWay=&country=&merchant=1&online=1&range=0&pageSize=100&"+fmt.Sprintf("t=%d", time.Now().Nanosecond()), nil)
+	req, _ := http.NewRequest(http.MethodGet, "https://otc-api.huobi.com/v1/data/trade-market?country=37&currency=1&payMethod=0&currPage=1&pageSize=100&coinId=1&tradeType=sell&blockType=general&online=1&"+fmt.Sprintf("t=%d", time.Now().Nanosecond()), nil)
 	req.Header.Add("Origin", "https://otc.huobipro.com")
 	req.Header.Add("Accept-Language", "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7")
 	req.Header.Add("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36")
