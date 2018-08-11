@@ -1,349 +1,18 @@
 package model
 
-// {
-//   "code": 200,
-//   "message": "成功",
-//   "totalCount": 29,
-//   "pageSize": 10,
-//   "totalPage": 3,
-//   "currPage": 1,
-//   "data": [
-//     {
-//       "id": 277952,
-//       "tradeNo": "01bp5062zt",
-//       "country": 86,
-//       "coinId": 1,
-//       "tradeType": 1,
-//       "merchant": 1,
-//       "merchantLevel": 1,
-//       "currency": 86,
-//       "payMethod": "1",
-//       "userId": 1611472,
-//       "userName": "btchui",
-//       "isFixed": true,
-//       "minTradeLimit": 30000.0,
-//       "maxTradeLimit": 94825.0,
-//       "fixedPrice": 64900.0,
-//       "calcRate": 0.0,
-//       "price": 64900.0,
-//       "gmtSort": 1520467051000,
-//       "tradeCount": 1.4611,
-//       "isOnline": true,
-//       "tradeMonthTimes": 64,
-//       "appealMonthTimes": 0,
-//       "appealMonthWinTimes": 0,
-//       "takerRealLevel": 2,
-//       "takerIsPhoneBind": true,
-//       "takerTradeTimes": 5,
-//       "takerLimit": null
-//     },
-//     {
-//       "id": 58134,
-//       "tradeNo": "sm6s67icky",
-//       "country": 86,
-//       "coinId": 1,
-//       "tradeType": 1,
-//       "merchant": 2,
-//       "merchantLevel": 2,
-//       "currency": 86,
-//       "payMethod": "1",
-//       "userId": 1646176,
-//       "userName": "军魂",
-//       "isFixed": true,
-//       "minTradeLimit": 50000.0,
-//       "maxTradeLimit": 50000.0,
-//       "fixedPrice": 64930.0,
-//       "calcRate": 0.0,
-//       "price": 64930.0,
-//       "gmtSort": 1520466830000,
-//       "tradeCount": 6.22994,
-//       "isOnline": true,
-//       "tradeMonthTimes": 196,
-//       "appealMonthTimes": 0,
-//       "appealMonthWinTimes": 0,
-//       "takerRealLevel": 2,
-//       "takerIsPhoneBind": true,
-//       "takerTradeTimes": 30,
-//       "takerLimit": null
-//     },
-//     {
-//       "id": 942,
-//       "tradeNo": "45g4h7457i",
-//       "country": 86,
-//       "coinId": 1,
-//       "tradeType": 1,
-//       "merchant": 2,
-//       "merchantLevel": 2,
-//       "currency": 86,
-//       "payMethod": "1,2",
-//       "userId": 1210432,
-//       "userName": "tradeAll",
-//       "isFixed": true,
-//       "minTradeLimit": 10000.0,
-//       "maxTradeLimit": 50000.0,
-//       "fixedPrice": 64999.0,
-//       "calcRate": 0.0,
-//       "price": 64999.0,
-//       "gmtSort": 1520466815000,
-//       "tradeCount": 0.261531,
-//       "isOnline": true,
-//       "tradeMonthTimes": 912,
-//       "appealMonthTimes": 1,
-//       "appealMonthWinTimes": 1,
-//       "takerRealLevel": 2,
-//       "takerIsPhoneBind": false,
-//       "takerTradeTimes": 3,
-//       "takerLimit": null
-//     },
-//     {
-//       "id": 61929,
-//       "tradeNo": "7m3k43vhg6",
-//       "country": 86,
-//       "coinId": 1,
-//       "tradeType": 1,
-//       "merchant": 2,
-//       "merchantLevel": 2,
-//       "currency": 86,
-//       "payMethod": "1,2,3",
-//       "userId": 1683072,
-//       "userName": "A诚信收比特币",
-//       "isFixed": true,
-//       "minTradeLimit": 500.0,
-//       "maxTradeLimit": 50000.0,
-//       "fixedPrice": 65000.0,
-//       "calcRate": 0.0,
-//       "price": 65000.0,
-//       "gmtSort": 1520466783000,
-//       "tradeCount": 0.187695,
-//       "isOnline": true,
-//       "tradeMonthTimes": 4829,
-//       "appealMonthTimes": 3,
-//       "appealMonthWinTimes": 2,
-//       "takerRealLevel": 1,
-//       "takerIsPhoneBind": true,
-//       "takerTradeTimes": 0,
-//       "takerLimit": null
-//     },
-//     {
-//       "id": 271882,
-//       "tradeNo": "du7wg2sonz",
-//       "country": 86,
-//       "coinId": 1,
-//       "tradeType": 1,
-//       "merchant": 2,
-//       "merchantLevel": 2,
-//       "currency": 86,
-//       "payMethod": "1,2",
-//       "userId": 1505065,
-//       "userName": "快上车",
-//       "isFixed": true,
-//       "minTradeLimit": 26000.0,
-//       "maxTradeLimit": 26000.0,
-//       "fixedPrice": 65000.0,
-//       "calcRate": 0.0,
-//       "price": 65000.0,
-//       "gmtSort": 1520467027000,
-//       "tradeCount": 0.4,
-//       "isOnline": true,
-//       "tradeMonthTimes": 471,
-//       "appealMonthTimes": 1,
-//       "appealMonthWinTimes": 1,
-//       "takerRealLevel": 1,
-//       "takerIsPhoneBind": true,
-//       "takerTradeTimes": 99,
-//       "takerLimit": null
-//     },
-//     {
-//       "id": 278417,
-//       "tradeNo": "ey5753gky4",
-//       "country": 86,
-//       "coinId": 1,
-//       "tradeType": 1,
-//       "merchant": 2,
-//       "merchantLevel": 2,
-//       "currency": 86,
-//       "payMethod": "1,2",
-//       "userId": 1628732,
-//       "userName": "会说",
-//       "isFixed": true,
-//       "minTradeLimit": 3000.0,
-//       "maxTradeLimit": 160000.0,
-//       "fixedPrice": 65055.0,
-//       "calcRate": 0.0,
-//       "price": 65055.0,
-//       "gmtSort": 1520466301000,
-//       "tradeCount": 1.536284,
-//       "isOnline": true,
-//       "tradeMonthTimes": 2622,
-//       "appealMonthTimes": 3,
-//       "appealMonthWinTimes": 1,
-//       "takerRealLevel": 1,
-//       "takerIsPhoneBind": true,
-//       "takerTradeTimes": 1,
-//       "takerLimit": null
-//     },
-//     {
-//       "id": 68064,
-//       "tradeNo": "yzln58tv55",
-//       "country": 86,
-//       "coinId": 1,
-//       "tradeType": 1,
-//       "merchant": 2,
-//       "merchantLevel": 2,
-//       "currency": 86,
-//       "payMethod": "1,2",
-//       "userId": 1999886,
-//       "userName": "麦蕊",
-//       "isFixed": true,
-//       "minTradeLimit": 100.0,
-//       "maxTradeLimit": 20000.0,
-//       "fixedPrice": 65198.0,
-//       "calcRate": 0.0,
-//       "price": 65198.0,
-//       "gmtSort": 1520466781000,
-//       "tradeCount": 0.067001,
-//       "isOnline": true,
-//       "tradeMonthTimes": 3309,
-//       "appealMonthTimes": 7,
-//       "appealMonthWinTimes": 7,
-//       "takerRealLevel": 1,
-//       "takerIsPhoneBind": true,
-//       "takerTradeTimes": 1,
-//       "takerLimit": null
-//     },
-//     {
-//       "id": 276611,
-//       "tradeNo": "k07vky91am",
-//       "country": 86,
-//       "coinId": 1,
-//       "tradeType": 1,
-//       "merchant": 2,
-//       "merchantLevel": 2,
-//       "currency": 86,
-//       "payMethod": "1",
-//       "userId": 1651599,
-//       "userName": "Ustkaka",
-//       "isFixed": true,
-//       "minTradeLimit": 10000.0,
-//       "maxTradeLimit": 59000.0,
-//       "fixedPrice": 65720.0,
-//       "calcRate": 0.0,
-//       "price": 65720.0,
-//       "gmtSort": 1520462918000,
-//       "tradeCount": 0.62408,
-//       "isOnline": true,
-//       "tradeMonthTimes": 170,
-//       "appealMonthTimes": 1,
-//       "appealMonthWinTimes": 1,
-//       "takerRealLevel": 2,
-//       "takerIsPhoneBind": true,
-//       "takerTradeTimes": 0,
-//       "takerLimit": null
-//     },
-//     {
-//       "id": 64518,
-//       "tradeNo": "y3060314ob",
-//       "country": 86,
-//       "coinId": 1,
-//       "tradeType": 1,
-//       "merchant": 2,
-//       "merchantLevel": 3,
-//       "currency": 86,
-//       "payMethod": "1,2",
-//       "userId": 1149422,
-//       "userName": "太子",
-//       "isFixed": true,
-//       "minTradeLimit": 1000.0,
-//       "maxTradeLimit": 7206.0,
-//       "fixedPrice": 65799.0,
-//       "calcRate": 0.0,
-//       "price": 65799.0,
-//       "gmtSort": 1520462350000,
-//       "tradeCount": 0.103133,
-//       "isOnline": true,
-//       "tradeMonthTimes": 2192,
-//       "appealMonthTimes": 2,
-//       "appealMonthWinTimes": 1,
-//       "takerRealLevel": 1,
-//       "takerIsPhoneBind": true,
-//       "takerTradeTimes": 0,
-//       "takerLimit": null
-//     },
-//     {
-//       "id": 224024,
-//       "tradeNo": "mt2n25h628",
-//       "country": 86,
-//       "coinId": 1,
-//       "tradeType": 1,
-//       "merchant": 2,
-//       "merchantLevel": 2,
-//       "currency": 86,
-//       "payMethod": "1,2,3",
-//       "userId": 1900658,
-//       "userName": "奋斗不息1986",
-//       "isFixed": true,
-//       "minTradeLimit": 300.0,
-//       "maxTradeLimit": 3000.0,
-//       "fixedPrice": 66100.0,
-//       "calcRate": 0.0,
-//       "price": 66100.0,
-//       "gmtSort": 1520466156000,
-//       "tradeCount": 0.004948,
-//       "isOnline": true,
-//       "tradeMonthTimes": 1751,
-//       "appealMonthTimes": 0,
-//       "appealMonthWinTimes": 0,
-//       "takerRealLevel": 1,
-//       "takerIsPhoneBind": false,
-//       "takerTradeTimes": 0,
-//       "takerLimit": null
-//     }
-//   ],
-//   "success": true
-// }
-type Result struct {
-	Code       int     `json:"code"`
-	Message    string  `json:"message"`
-	TotalCount int     `json:"totalCount"`
-	PageSize   int     `json:"pageSize"`
-	CurrPage   int     `json:"currPage"`
-	Data       []Trade `json:"data"`
-	Success    bool    `json:"success"`
+type SellResult struct {
+	Code       int         `json:"code"`
+	Message    string      `json:"message"`
+	TotalCount int         `json:"totalCount"`
+	PageSize   int         `json:"pageSize"`
+	CurrPage   int         `json:"currPage"`
+	Data       []SellTrade `json:"data"`
+	Success    bool        `json:"success"`
 }
 
-// {
-// 	"id": 58134,
-// 	"tradeNo": "sm6s67icky",
-// 	"country": 86,
-// 	"coinId": 1,
-// 	"tradeType": 1,
-// 	"merchant": 2,
-// 	"merchantLevel": 2,
-// 	"currency": 86,
-// 	"payMethod": "1",
-// 	"userId": 1646176,
-// 	"userName": "军魂",
-// 	"isFixed": true,
-// 	"minTradeLimit": 50000.0,
-// 	"maxTradeLimit": 50000.0,
-// 	"fixedPrice": 64840.0,
-// 	"calcRate": 0.0,
-// 	"price": 64840.0,
-// 	"gmtSort": 1520467251000,
-// 	"tradeCount": 6.22994,
-// 	"isOnline": true,
-// 	"tradeMonthTimes": 197,
-// 	"appealMonthTimes": 0,
-// 	"appealMonthWinTimes": 0,
-// 	"takerRealLevel": 2,
-// 	"takerIsPhoneBind": true,
-// 	"takerTradeTimes": 30,
-// 	"takerLimit": 7
-// }
-type Trade struct {
-	ID      int    `json:"id"`
-	TradeNo string `json:"tradeNo"`
-
+type SellTrade struct {
+	ID                  int     `json:"id"`
+	TradeNo             string  `json:"tradeNo"`
 	Country             int     `json:"country"`
 	CoinId              int     `json:"coinId"`
 	TradeType           int     `json:"tradeType"`
@@ -369,4 +38,37 @@ type Trade struct {
 	TakerIsPhoneBind    bool    `json:"takerIsPhoneBind"`
 	TakerTradeTimes     int     `json:"takerTradeTimes"`
 	TakerLimit          int     `json:"takerLimit"`
+}
+
+type BuyResult struct {
+	Code       int        `json:"code"`
+	Message    string     `json:"message"`
+	TotalCount int        `json:"totalCount"`
+	PageSize   int        `json:"pageSize"`
+	CurrPage   int        `json:"currPage"`
+	Data       []BuyTrade `json:"data"`
+	Success    bool       `json:"success"`
+}
+
+type BuyTrade struct {
+	ID                int     `json:"id"`
+	UID               int     `json:"uid"`
+	UserName          string  `json:"userName"`
+	MerchantLevel     int     `json:"merchantLevel"`
+	CoinId            int     `json:"coinId"`
+	Currency          int     `json:"currency"`
+	TradeType         int     `json:"tradeType"`
+	BlockType         int     `json:"blockType"`
+	PayMethod         string  `json:"payMethod"`
+	PayTerm           string  `json:"payTerm"`
+	PayName           string  `json:"payName"`
+	MinTradeLimit     float64 `json:"minTradeLimit"`
+	MaxTradeLimit     float64 `json:"maxTradeLimit"`
+	Price             float64 `json:"price"`
+	TradeCount        float64 `json:"tradeCount"`
+	IsOnline          bool    `json:"isOnline"`
+	TradeMonthTimes   int     `json:"tradeMonthTimes"`
+	OrderCompleteRate int     `json:"orderCompleteRate"`
+	TakerLimit        int     `json:"takerLimit"`
+	GmtSort           int     `json:"gmtSort"`
 }
