@@ -1,6 +1,0 @@
-package: github.com/shanexu/huobi
-import:
-- package: github.com/influxdata/influxdb
-  version: ^1.5.0
-  subpackages:
-  - client/v2
