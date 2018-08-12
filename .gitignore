@@ -2,4 +2,4 @@
 bin
 .build
 .envrc
-/nohup
+/nohup.out
