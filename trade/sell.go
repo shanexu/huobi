@@ -1,4 +1,4 @@
-package main
+package trade
 
 import (
 	"encoding/json"
@@ -16,7 +16,7 @@ import (
 
 var prevSellResult model.SellResult
 
-func sellTrade() {
+func SellTrade() {
 	ticker := time.NewTicker(time.Second * 5)
 	for {
 		select {

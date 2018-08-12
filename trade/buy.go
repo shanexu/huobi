@@ -1,4 +1,4 @@
-package main
+package trade
 
 import (
 	"encoding/json"
@@ -16,7 +16,7 @@ import (
 
 var prevBuyResult model.BuyResult
 
-func buyTrade() {
+func BuyTrade() {
 	ticker := time.NewTicker(time.Second * 5)
 	for {
 		select {
