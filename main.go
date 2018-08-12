@@ -6,6 +6,7 @@ import (
 	"os/signal"
 	"syscall"
 
+	"github.com/shanexu/huobi/quote"
 	"github.com/shanexu/huobi/trade"
 )
 
@@ -15,6 +16,7 @@ func main() {
 
 	go trade.SellTrade()
 	go trade.BuyTrade()
+	go quote.Quote()
 
 	<-sigs
 	log.Println("Bye bye!")

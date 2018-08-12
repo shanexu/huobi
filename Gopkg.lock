@@ -13,9 +13,20 @@
   revision = "5766854b95ae86cccf6cc8ffe4c5bb9eacc994b8"
   version = "v1.6.1"
 
+[[projects]]
+  branch = "master"
+  digest = "1:5402cc593be09c8af6d078879ebce0e588c98db2a800fd8d77c2953c5f6f7ec2"
+  name = "github.com/markcheno/go-quote"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "a380046780ee35058f0e3f5124cc64c0077a3528"
+
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  input-imports = ["github.com/influxdata/influxdb/client/v2"]
+  input-imports = [
+    "github.com/influxdata/influxdb/client/v2",
+    "github.com/markcheno/go-quote",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1

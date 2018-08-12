@@ -11,6 +11,7 @@ import (
 
 	influx "github.com/influxdata/influxdb/client/v2"
 
+	. "github.com/shanexu/huobi/influxdb"
 	"github.com/shanexu/huobi/model"
 )
 
@@ -109,5 +110,5 @@ func processBuy(result *model.BuyResult, now time.Time) {
 			bp.AddPoint(pt)
 		}
 	}
-	influxClient.Write(bp)
+	InfluxClient.Write(bp)
 }
